@@ -1,0 +1,17 @@
+.header{
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    min-height: 200px;
+    min-width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+.header img{
+    min-width: 126px;
+    height: 48px;
+    margin: auto;
+}
