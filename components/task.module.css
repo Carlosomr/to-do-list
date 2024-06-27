@@ -1,17 +1,18 @@
 .article{
     display: flex;
-    flex-direction: column;
-    border: solid red;
     margin-top: 174px;
-
+    
+   
 
 }
 .article input{
+    
     width: 736px;
     height: 54px;
     margin: auto;
     background: var(--gray-500);
     border: solid var(--gray-500);
     border-radius: 8px;
-    
+    align-items: center;
+    gap: 10px;
 }
