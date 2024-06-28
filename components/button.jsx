@@ -8,7 +8,7 @@ export function Button ({title}){
     return(
         
         <button className= {style.button} type="Button">
-            {title}
+            {title} 
         </button>
         
     )
