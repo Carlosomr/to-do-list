@@ -1,7 +1,7 @@
 
-import { Header } from '../components/header';
-import { Task } from '../components/task';
-import style from './App.module.css';
+import { Header } from './components/header';
+import { Search } from './components/search';
+
 
 import './global.css';
 export function App() {
@@ -9,9 +9,8 @@ export function App() {
   return (
     <>
     <Header/>
-    <main className= {style.wrapper}>
-    <Task/>
-    </main>
+    <Search/>
+  
     </>
   )
 }
