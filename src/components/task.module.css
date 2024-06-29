@@ -1,0 +1,25 @@
+.article{
+    width: 840px;
+    height: 287px;
+    margin: auto;
+    margin-top: 74px;
+
+}
+.contador{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    
+}
+.contador span{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+.contador strong{
+    color: var(--purple);
+    font-weight: 600;
+    font-size: 14px;
+}

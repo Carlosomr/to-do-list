@@ -4,10 +4,10 @@ export function Search (){
 
     return(
         <div className= {style.container}>
-        <article className= {style.article}>
+        <div className= {style.div}>
             <input type="text" placeholder='Adicione uma nova tarefa'></input>
             <Button title="Criar" ></Button>
-        </article>
+        </div>
         </div>
 
     )

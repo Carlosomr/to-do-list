@@ -2,12 +2,12 @@
     display: flex;
 }
 
-.article{
+.div{
     margin: auto;
     margin-top: 174px;
     padding: 10px;
 }
-.article button{
+.div button{
     margin-left: 15px;
     border-radius: 8px;
     color: var(--gray-100);
@@ -18,7 +18,8 @@
 }
 
 
-.article input{
+
+.div input{
     
     width: 736px;
     height: 54px;

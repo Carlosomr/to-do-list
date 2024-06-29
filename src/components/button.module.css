@@ -3,7 +3,12 @@
     width: 90px;
     height: 52px;
     border: none;
+    cursor: pointer;
     
 
 
+}
+.button:hover{
+
+    background: var(--blue);
 }
