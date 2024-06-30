@@ -1,3 +1,4 @@
+
 import style from './task.module.css';
 export function Task () {
 
@@ -7,6 +8,8 @@ export function Task () {
             <span>Tarefas Criadas</span>
             <strong>Concluidas</strong>
             </div>
+
+            
         </article>
 
     )
