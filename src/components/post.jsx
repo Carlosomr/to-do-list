@@ -8,27 +8,35 @@ import { useState } from 'react';
 export function Post ({tarefa}) {
     const [novaTarefa, setNovaTarefa] = useState([
         'Fazer lição',
-      
 
     ])
+    const [newTaskText, setNewTaskText] = useState('')
 
     function handleCreateNewTask (){
         event.preventDefault()
-
-        const newTaskText = event.target.novatarefa.value
-        console.log(event.target.novatarefa.value)
-
         setNovaTarefa([...novaTarefa, newTaskText])
-        console.log(novaTarefa);
+        setNewTaskText('');
+    }
 
-        event.target.novatarefa.value = '';
+    function handleNewTaskChange(){
+
+        setNewTaskText(event.target.value);
+
     }
 
     return(
        <main className={style.search}>
        
             <form onSubmit={handleCreateNewTask} className= {style.formulario}>
-            <input type="text" name="novatarefa" placeholder='Adicione uma nova tarefa'></input>
+            <input
+            type="text" 
+            name="novatarefa" 
+            value={newTaskText}
+            placeholder='Adicione uma nova tarefa'
+            onChange={handleNewTaskChange}
+            />
+
+    
             <footer>
             <Button type='submit' title='Criar'/>
             </footer>
