@@ -27,10 +27,6 @@
     cursor: pointer;
    margin: 10px;
  }
- .checkbox > Trash{
-   color: var(--gray-100);
- 
- }
 
  
  .container{

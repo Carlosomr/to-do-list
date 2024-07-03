@@ -1,7 +1,12 @@
 import { CheckCircle, Trash } from '@phosphor-icons/react';
 import style from './task.module.css';
 
-export function Task (props){
+export function Task ({tarefa, deleteTask}){
+
+  function handleDeleteTask() {
+
+    deleteTask(tarefa);
+  }
      return (
 
             <div className= {style.checkbox}>
@@ -10,10 +15,10 @@ export function Task (props){
                      </div>
                    
             <div className={style.tarefa}>
-                <p>{props.tarefa}</p>
+                <p>{tarefa}</p>
             </div>
-          <button>
-          <Trash color='white' size={20}/>
+          <button onClick={handleDeleteTask}>
+          <Trash color='red' size={20}/>
           </button>
             </div>
     )

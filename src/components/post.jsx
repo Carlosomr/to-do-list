@@ -6,10 +6,7 @@ import { useState } from 'react';
 
 
 export function Post ({tarefa}) {
-    const [novaTarefa, setNovaTarefa] = useState([
-        'Fazer lição',
-
-    ])
+    const [novaTarefa, setNovaTarefa] = useState(['teste'])
     const [newTaskText, setNewTaskText] = useState('')
 
     function handleCreateNewTask (){
@@ -22,6 +19,13 @@ export function Post ({tarefa}) {
 
         setNewTaskText(event.target.value);
 
+    }
+    function deleteTask(taskToDelete){
+        const newTaskWhithDelete = novaTarefa.filter(novatarefa => {
+            return novatarefa != taskToDelete;
+        })
+        setNovaTarefa(newTaskWhithDelete);
+        console.log(`Deletar a tarefa '${newTaskWhithDelete}'`);
     }
 
     return(
@@ -52,7 +56,12 @@ export function Post ({tarefa}) {
 
         <div className= {style.novaTarefa}>
             {novaTarefa.map(comment =>{
-                return <Task tarefa={comment}/>
+                return<Task 
+                key={comment} 
+                tarefa={comment}
+                deleteTask={deleteTask}
+                />
+                
             })}
         </div>
        

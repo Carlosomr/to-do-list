@@ -22,11 +22,13 @@ return (
   <>
   <Header/>
   <Post/>
-  {tarefas.map(tasks => (
+  {tarefas.map(tasks => {
+    return(
   <Task 
   key={tasks.id} 
   tarefa={tasks.tarefa} />
-  ))}
+  )
+})}
   
   
   </>
