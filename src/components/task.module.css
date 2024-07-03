@@ -1,26 +1,39 @@
-.article{
-    width: 840px;
-    height: 50px;
+.checkbox{
+    width: 832px;
+    height: 80px;
     margin: auto;
-    margin-top: 74px;
-    margin-bottom: 20px;
-
-}
-.contador{
-
+    padding-top: 0px;
     display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    
-}
-.contador span{
-    color: var(--blue);
-    font-weight: 600;
-    font-size: 14px;
-    
-}
-.contador strong{
-    color: var(--purple);
-    font-weight: 600;
-    font-size: 14px;
-}
+    background: var(--gray-500);
+    color: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 20px;
+ 
+ }
+.check{
+    margin: auto;
+    margin-left: 15px;
+    cursor: pointer;
+ }
+ 
+ .tarefa {
+    padding: 10px;
+    margin: auto;
+    margin-left: 20px;
+ }
+ .checkbox button{
+   border: none;
+   background: var(--gray-500);
+    cursor: pointer;
+   margin: 10px;
+ }
+ .checkbox > Trash{
+   color: var(--gray-100);
+ 
+ }
+
+ 
+ .container{
+    display: flex;
+ }
+ 
