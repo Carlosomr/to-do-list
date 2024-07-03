@@ -15,10 +15,6 @@ export function Task (props){
           <button>
           <Trash color='white' size={20}/>
           </button>
-            
-      
-               
-           
             </div>
     )
 }
