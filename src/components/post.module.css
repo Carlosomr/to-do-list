@@ -55,6 +55,54 @@ gap: 10px;
    font-size: 14px;
 }
 
+@media (max-width: 700px) {
+   .formulario {
+   display: flex;
+   flex-direction: row;
+     align-items: center;
+     padding-right: 25px;
+   }
+   
+   .formulario input{
+      width: 90%;
+   }
+   .formulario button {
+     width: 100%;
+   }
+   .article{
+      flex-direction: column;
+   }
+   .contador{
+      justify-content: flex-start;
+      flex-direction: column;
+
+
+   }
+ }
+ 
+ /* Responsivo para telas médias */
+ @media (min-width: 700px) and (max-width: 1024px) {
+   .formulario {
+      display: flex;
+      flex-direction: row;
+        align-items: center;
+        padding-right: 25px;
+      }
+   .formulario input {
+      max-width: 90% ;
+   }
+   .formulario button {
+     width: 100%; /* Ajuste conforme necessário */
+   }
+   .article{
+      flex-direction: column;
+   }
+   .contador{
+      justify-content: flex-start;
+     
+   }
+ }
+ 
 
 
 

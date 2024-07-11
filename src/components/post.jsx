@@ -6,27 +6,36 @@ import { useState } from 'react';
 
 
 export function Post ({tarefa}) {
-    const [novaTarefa, setNovaTarefa] = useState(['teste'])
+    const [novaTarefa, setNovaTarefa] = useState([])
     const [newTaskText, setNewTaskText] = useState('')
 
     function handleCreateNewTask (){
+        if (newTaskText == 0){
+           alert("Não é possível criar uma tarefa sem adicionar uma tarefa anterior");
+           return 
+        }
         event.preventDefault()
-        setNovaTarefa([...novaTarefa, newTaskText])
+       
+        setNovaTarefa([...novaTarefa, newTaskText]);
         setNewTaskText('');
+
+        
     }
 
     function handleNewTaskChange(){
-
+        
         setNewTaskText(event.target.value);
+        
 
     }
     function deleteTask(taskToDelete){
         const newTaskWhithDelete = novaTarefa.filter(novatarefa => {
-            return novatarefa != taskToDelete;
+            return novatarefa != taskToDelete ;
         })
         setNovaTarefa(newTaskWhithDelete);
         console.log(`Deletar a tarefa '${newTaskWhithDelete}'`);
     }
+
 
     return(
        <main className={style.search}>
@@ -57,7 +66,7 @@ export function Post ({tarefa}) {
         <div className= {style.novaTarefa}>
             {novaTarefa.map(comment =>{
                 return<Task 
-                key={comment} 
+                key= {comment} 
                 tarefa={comment}
                 deleteTask={deleteTask}
                 />

@@ -32,4 +32,11 @@
  .container{
     display: flex;
  }
+
+ @media (max-width: 1000px) {
+   
+   .checkbox {
+     width: 90%;
+   }
+ }
  
