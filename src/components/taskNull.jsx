@@ -1,9 +1,9 @@
-import style from './taskNull.module.css'
+import style from './taskNull.module.css';
 import Clipboard from '../assets/Clipboard.svg';
 
 export function TaskNull () {
     return (
-        <aside>
+        <aside className= {style.tarefaNula}>
           
             <img src= {Clipboard}></img>
             <p>Você ainda não tem tarefas cadastradas <br/>
