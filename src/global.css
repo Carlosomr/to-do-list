@@ -21,17 +21,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    
 }
 body{
+    margin: auto;
     background: var(--gray-600);
-    min-width: 100%;
 }
 
-@media (max-width: 600px) {
-    body {
-      min-width: 200px;
+@media (min-width: 200px) and (max-width: 1000px) {
+body{
+      margin: auto;
+      
     }
-.header{
-    min-width: 200px;
-}
+
 }
