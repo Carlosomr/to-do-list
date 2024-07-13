@@ -1,0 +1,57 @@
+aside{
+    border-top: solid 1px var(--gray-400);
+    margin: auto;
+    width: 736px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+}
+aside img{
+    width: 56px;
+    height: 56px;
+    margin: auto;
+    margin-top: 50px;
+}
+aside p {
+    margin: auto;
+    width: 500px;
+    height: 80px;
+    text-align: center;
+    
+    color: var(--gray-300);
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        padding: 0 20px; /* Adiciona algum padding para evitar que o conteúdo fique muito próximo dos bordos */
+    }
+
+    aside img {
+        width: 40px; /* Reduz o tamanho da imagem para telas menores */
+        height: 40px;
+    }
+
+    aside p {
+        width: 90%; /* Ajusta a largura do parágrafo para ocupar menos espaço */
+        font-size: 14px; /* Diminui o tamanho da fonte para melhorar a legibilidade em telas menores */
+    }
+}
+
+/* Media query para telas médias (por exemplo, tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    aside {
+        width: 100%;
+        padding: 0 30px; /* Ajusta o padding para telas maiores */
+    }
+
+    aside img {
+        width: 48px; /* Ajusta o tamanho da imagem para telas maiores */
+        height: 48px;
+    }
+
+    aside p {
+        width: 95%; /* Ajusta a largura do parágrafo para telas maiores */
+        font-size: 16px; /* Aumenta o tamanho da fonte para melhorar a legibilidade em telas maiores */
+    }
+}

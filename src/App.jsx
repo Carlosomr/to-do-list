@@ -2,6 +2,7 @@
 import { Header } from './components/header';
 import { Post } from './components/post';
 import { Task } from './components/task';
+import { TaskNull } from './components/taskNull';
 
 import './global.css';
 export function App() {

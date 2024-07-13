@@ -3,11 +3,13 @@ import { Task } from './task';
 
 import { Button } from './button';
 import { useState } from 'react';
+import { TaskNull } from './taskNull';
 
 
 export function Post ({tarefa}) {
     const [novaTarefa, setNovaTarefa] = useState([])
     const [newTaskText, setNewTaskText] = useState('')
+
 
     function handleCreateNewTask (){
         if (newTaskText == 0){
@@ -63,16 +65,22 @@ export function Post ({tarefa}) {
             </div>   
         </article>
 
-        <div className= {style.novaTarefa}>
-            {novaTarefa.map(comment =>{
-                return<Task 
-                key= {comment} 
-                tarefa={comment}
-                deleteTask={deleteTask}
-                />
-                
-            })}
-        </div>
+
+
+        <div className={style.novaTarefa}>
+                {novaTarefa.length === 0 ? (
+                    <TaskNull />
+                ) : (
+                    /* tarefa é diferente de 0 comentarios? retorna o map */
+                    novaTarefa.map((comment) => (
+                        <Task
+                            key={comment}
+                            tarefa={comment}
+                            deleteTask={deleteTask}
+                        />
+                    ))
+                )}
+            </div>
        
         </main>
     )
