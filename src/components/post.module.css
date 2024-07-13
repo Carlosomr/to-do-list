@@ -40,6 +40,7 @@ gap: 10px;
 .contador {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    padding: 5px;
    flex-wrap: wrap; /* Permite que os itens sejam empilhados se necessário */
 }
@@ -48,12 +49,42 @@ gap: 10px;
    font-weight: 600;
    font-size: 14px;
    
+   
 }
 .contador strong{
    color: var(--purple);
    font-weight: 600;
    font-size: 14px;
 
+}
+.criada{
+   
+   display: flex;
+   gap: 10px;
+}
+.criada strong {
+   width: 30px;
+   align-items: center;
+   text-align: center;
+   background: var(--gray-400);
+   color: var(--gray-100);
+   border-radius: 8px;
+}
+.concluidas{
+   display: flex;
+   gap: 10px;
+   
+}
+.concluidas span{
+   color: var(--purple);
+}
+.concluidas strong{
+   width: 30px;
+   align-items: center;
+   text-align: center;
+   background: var(--gray-400);
+   color: var(--gray-100);
+   border-radius: 8px;
 }
 .search, .formulario, .article {
    overflow-x: hidden;  

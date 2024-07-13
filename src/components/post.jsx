@@ -37,6 +37,7 @@ export function Post ({tarefa}) {
         setNovaTarefa(newTaskWhithDelete);
         console.log(`Deletar a tarefa '${newTaskWhithDelete}'`);
     }
+ 
 
 
     return(
@@ -59,10 +60,17 @@ export function Post ({tarefa}) {
             </form>
 
         <article className= {style.article}>
-            <div className={style.contador}>
-             <span>Tarefas Criadas</span>
-             <strong>Concluidas</strong>
-            </div>   
+        <div className={style.contador}>
+        <div className={style.criada}>
+            <span>Tarefas Criadas:</span>
+            <strong>{novaTarefa.length}</strong>
+        </div>
+        <div className={style.concluidas}>
+            <span>Concluídas:</span>
+            <strong>{novaTarefa.filter(task => task.isCompleted).length}</strong>
+        </div>
+        
+        </div>
         </article>
 
 
